@@ -6,7 +6,7 @@ const Layout = ({ children }: { children?: JSX.Element | undefined }) => {
     return (
         <div
             style={{ maxWidth: '1000px' }}
-            className="bg z-0 flex mx-auto flex-col items-center w-full h-screen pb-16 lg:pb-0 text-white"
+            className="bg z-0 flex mx-auto flex-col items-center w-full h-screen text-white"
         >
             <Header />
             <main

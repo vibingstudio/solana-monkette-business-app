@@ -1,36 +1,53 @@
 {
-    "name": "solana-monkettes-buinsess-app",
-    "version": "0.1.0",
-    "private": true,
-    "license": "MIT",
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "format": "prettier --write ."
-    },
-    "dependencies": {
-        "@gokiprotocol/walletkit": "^1.4.4",
-        "@headlessui/react": "1.4.1",
-        "@emotion/react": "11.5.0",
-        "@emotion/styled": "11.3.0",
-        "@heroicons/react": "1.0.4",
-        "@saberhq/use-solana": "1.3.18",
-        "@solana/web3.js": "1.29.2",
-        "autoprefixer": "10.3.4",
-        "next": "11.1.2",
-        "next-pwa": "5.3.1",
-        "postcss": "8.3.6",
-        "prettier": "2.4.1",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
-        "tailwindcss": "2.2.15"
-    },
-    "devDependencies": {
-        "@types/react": "17.0.21",
-        "eslint": "7.32.0",
-        "eslint-config-next": "11.1.2",
-        "typescript": "4.4.3"
-    }
+  "name": "solana-monkette-business-app",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@craco/craco": "6.3.0",
+    "@emotion/react": "11.5.0",
+    "@emotion/styled": "11.3.0",
+    "@gokiprotocol/walletkit": "1.4.4",
+    "@saberhq/solana-contrib": "1.3.18",
+    "@saberhq/token-utils": "1.3.18",
+    "@saberhq/use-solana": "1.3.18",
+    "@solana/spl-token-registry": "0.2.282",
+    "@solana/web3.js": "1.29.2",
+    "@types/babel__core": "7.1.16",
+    "@types/bn.js": "5.1.0",
+    "@types/react": "17.0.30",
+    "bn.js": "5.2.0",
+    "polished": "4.1.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "4.0.3",
+    "tiny-invariant": "1.1.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "format": "prettier --write ."
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "@emotion/babel-plugin": "11.3.0",
+    "@types/node": "16.11.1",
+    "@types/react-dom": "17.0.10",
+    "typescript": "4.4.4",
+    "prettier": "2.4.1"
+  },
+  "repository": "git@github.com:vibingstudio/solana-monkette-business-app.git"
 }

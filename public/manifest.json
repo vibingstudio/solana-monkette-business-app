@@ -1,28 +1,20 @@
 {
-  "short_name": "Solana Monkettes Business",
-  "name": "Solana Monkettes Business | Generative female NFTs inspired by SolanaMBS and MonkeDAO",
+  "short_name": "Solana Monkette Business",
+  "name": "Solana Monkette Business | Generative female NFTs inspired by SolanaMBS and MonkeDAO",
   "icons": [
     {
-      "src": "manifest-icon-192.maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "manifest-icon-512.maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
       "src": "favicon.ico",
-      "sizes": "32x32",
-      "type": "image/png"
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.jpeg",
+      "type": "image/jpeg",
+      "sizes": "383x383"
     }
   ],
-  "orientation": "portrait",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#000000",
-  "start_url": "/"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
 }

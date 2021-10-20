@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "T1";
+  src: url("./fonts/t1.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "T1", serif;
+}
+
+body {
+  background-color: #f2cedc;
+}

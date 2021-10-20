@@ -5,7 +5,7 @@ import React from 'react'
 const Layout = ({ children }: { children?: JSX.Element | undefined }) => {
     return (
         <div
-            style={{ maxWidth: '1200px' }}
+            style={{ maxWidth: '1000px' }}
             className="bg z-0 flex mx-auto flex-col items-center w-full h-screen pb-16 lg:pb-0 text-white"
         >
             <Header />

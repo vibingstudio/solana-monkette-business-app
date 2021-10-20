@@ -11,14 +11,15 @@ function AppBar(): JSX.Element {
                         <div className="px-4 py-4">
                             <div className="flex items-center justify-between">
                                 <div
-                                    style={{ maxWidth: '1200px' }}
+                                    style={{ maxWidth: '1000px' }}
                                     className="mx-auto flex items-center justify-between z-10 w-full cursor-pointer"
                                 >
                                     <Image className="rounded-lg" src="/logo.png" width="50px" height="50px" />
-                                    <div className="flex flex-row"></div>
-                                    <div className="border-white rounded-lg border-2 p-1.5 text-md">Connector</div>
+                                    <div className="flex flex-row hidden sm:inline-flex">
+                                        <div className="border-white rounded-lg border-2 p-1.5 text-md">Connector</div>
+                                    </div>
                                 </div>
-                                <div className="flex -mr-2 md:hidden">
+                                <div className="flex -mr-2 sm:hidden">
                                     <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-high-emphesis focus:outline-none">
                                         <span className="sr-only">Open Menu</span>
                                         {open ? (

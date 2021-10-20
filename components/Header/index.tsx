@@ -1,17 +1,22 @@
 import React from 'react'
 import { Popover } from '@headlessui/react'
+import Image from 'next/image'
 
 function AppBar(): JSX.Element {
     return (
-        <header className="flex-shrink-0 w-full z-30">
-            <Popover as="nav" className="w-full bg-transparent header-border-b">
+        <header className="flex-shrink-0 w-full z-30 bg-strong-pink w-screen">
+            <Popover as="nav" className="w-full header-border-b text-white">
                 {({ open }) => (
                     <>
                         <div className="px-4 py-4">
                             <div className="flex items-center justify-between">
-                                <div className="flex items-center z-10 cursor-pointer">
-                                    <div>Logo</div>
-                                    <div className="hidden md:block sm:ml-2"></div>
+                                <div
+                                    style={{ maxWidth: '1200px' }}
+                                    className="mx-auto flex items-center justify-between z-10 w-full cursor-pointer"
+                                >
+                                    <Image className="rounded-lg" src="/logo.png" width="50px" height="50px" />
+                                    <div className="flex flex-row"></div>
+                                    <div className="border-white rounded-lg border-2 p-1.5 text-md">Connector</div>
                                 </div>
                                 <div className="flex -mr-2 md:hidden">
                                     <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-high-emphesis focus:outline-none">

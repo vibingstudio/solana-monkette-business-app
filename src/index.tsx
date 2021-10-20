@@ -9,7 +9,7 @@ import "./styles.css";
 ReactDOM.render(
   <React.StrictMode>
     <WalletKitProvider
-      defaultNetwork="devnet"
+      defaultNetwork="mainnet-beta"
       app={{
         name: "My App",
       }}

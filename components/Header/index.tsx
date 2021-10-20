@@ -1,6 +1,7 @@
 import React from 'react'
 import { Popover } from '@headlessui/react'
 import Image from 'next/image'
+import {ConnectWalletButton} from "@gokiprotocol/walletkit";
 
 function AppBar(): JSX.Element {
     return (
@@ -16,7 +17,7 @@ function AppBar(): JSX.Element {
                                 >
                                     <Image className="rounded-lg" src="/logo.png" width="50px" height="50px" />
                                     <div className="flex flex-row hidden sm:inline-flex">
-                                        <div className="border-white rounded-lg border-2 p-1.5 text-md">Connector</div>
+                                        <ConnectWalletButton />
                                     </div>
                                 </div>
                                 <div className="flex -mr-2 sm:hidden">

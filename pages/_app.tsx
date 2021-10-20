@@ -5,6 +5,7 @@ import DefaultLayout from '../layouts/Default'
 import { Fragment, FunctionComponent } from 'react'
 import { NextComponentType, NextPageContext } from 'next'
 import Head from 'next/head'
+import { WalletKitProvider } from '@gokiprotocol/walletkit'
 
 export default function MyApp({
     Component,
@@ -97,13 +98,19 @@ export default function MyApp({
                     content="Generative female NFTs inspired by SolanaMBS and MonkeDAO"
                 />
             </Head>
-            <Provider>
-                <Layout>
-                    <Guard>
-                        <Component {...pageProps} />
-                    </Guard>
-                </Layout>
-            </Provider>
+            <WalletKitProvider
+                app={{
+                    name: 'Solana Monkette Business',
+                }}
+            >
+                <Provider>
+                    <Layout>
+                        <Guard>
+                            <Component {...pageProps} />
+                        </Guard>
+                    </Layout>
+                </Provider>
+            </WalletKitProvider>
         </Fragment>
     )
 }

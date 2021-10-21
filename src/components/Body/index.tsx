@@ -18,11 +18,11 @@ const Body = (): JSX.Element => {
   const [image, setImage] = useState(images[randomIntFromInterval(0, 3)]);
 
   useEffect(() => {
-    console.log("useEffect")
-    setInterval(() => {
+    const interval = setInterval(() => {
       const rand = randomIntFromInterval(0, 3);
       setImage(images[rand]);
     }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (

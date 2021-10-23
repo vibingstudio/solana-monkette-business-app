@@ -63,14 +63,14 @@ const Body = (): JSX.Element => {
                 <p className="px-9 py-2 text-white">
                   30% of mints donated to the <b>Monke DAO</b>
                 </p>
-                <p className="px-9 py-2 text-white">{nftsData.itemsRemaining} Monkette Available</p>
+                <p className="px-9 py-2 text-white">0 Monkette Available</p>
                 { isSoldOut ? (<div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
                   <button className="p-2 opacity-50 cursor-not-allowed">
                     <h1>Sold Out</h1>
                   </button>
-                </div>) : (<div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                  <button className="p-2" onClick={ () => onMint()}>
-                    <h1>Mint</h1>
+                </div>) : (<div className="text-center opacity-50 bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
+                  <button className="p-2">
+                    <h1>Coming soon</h1>
                   </button>
                 </div>)}
                 <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">

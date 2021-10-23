@@ -1,25 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { WalletKitProvider } from "@gokiprotocol/walletkit";
 import "./styles.css";
+import "@solana/wallet-adapter-react-ui/styles.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
+import { WalletBalanceProvider } from "./hooks/useWalletBalance";
+import WalletConnectionProvider from "./components/WalletConnectionProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <WalletKitProvider
-      defaultNetwork="mainnet-beta"
-      app={{
-        name: "Solana Monkette Business",
-      }}
-    >
-      <div className="flex flex-col justify-between h-screen">
-        <Header />
-        <Body />
-        <Footer />
-      </div>
-    </WalletKitProvider>
+    <WalletConnectionProvider>
+      <WalletBalanceProvider>
+        <div className="flex flex-col justify-between h-screen">
+          <Header />
+          <Body />
+          <Footer />
+        </div>
+      </WalletBalanceProvider>
+    </WalletConnectionProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

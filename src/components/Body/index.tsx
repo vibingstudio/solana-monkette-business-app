@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useConnectedWallet } from "@saberhq/use-solana";
-import { DisconnectWalletButton } from "../Buttons";
-import { ConnectWalletButton } from "@gokiprotocol/walletkit";
+import useCandyMachine from "../../hooks/useCandyMachine";
 
 const Body = (): JSX.Element => {
   function randomIntFromInterval(min: number, max: number) {
@@ -24,6 +22,23 @@ const Body = (): JSX.Element => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const {
+    isSoldOut,
+    mintStartDate,
+    isMinting,
+    onMint,
+    onMintMultiple,
+    nftsData,
+  } = useCandyMachine();
+  console.log(
+    isSoldOut,
+    mintStartDate,
+    isMinting,
+    onMint,
+    onMintMultiple,
+    nftsData
+  );
 
   return (
     <div className="flex-shrink-0 w-full w-screen">

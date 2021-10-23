@@ -1,11 +1,8 @@
 import React from "react";
-import { useConnectedWallet } from "@saberhq/use-solana";
-import { DisconnectWalletButton } from "../Buttons";
-import { ConnectWalletButton } from "@gokiprotocol/walletkit";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
 
 const Header = (): JSX.Element => {
-  const wallet = useConnectedWallet();
-
   return (
     <header className="flex-shrink-0 w-full bg-strong-pink w-screen">
       <div className="px-4 py-4">
@@ -21,7 +18,7 @@ const Header = (): JSX.Element => {
               height="50px"
               alt="Solana Monkette Business | Solana Queen"
             />
-            {wallet ? <DisconnectWalletButton /> : <ConnectWalletButton />}
+            <WalletMultiButton />
           </div>
         </div>
       </div>

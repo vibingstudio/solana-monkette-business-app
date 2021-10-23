@@ -1,6 +1,5 @@
 import React from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useAnchorWallet } from "@solana/wallet-adapter-react";
 
 const Header = (): JSX.Element => {
   return (

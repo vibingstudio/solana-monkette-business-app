@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useCandyMachine from "../../hooks/useCandyMachine";
+import toast from "react-hot-toast";
 
 const Body = (): JSX.Element => {
   function randomIntFromInterval(min: number, max: number) {
@@ -23,11 +24,7 @@ const Body = (): JSX.Element => {
     return () => clearInterval(interval);
   }, []);
 
-  const {
-    isSoldOut,
-    nftsData,
-    onMint,
-  } = useCandyMachine();
+  const { isSoldOut, nftsData, onMint, isMinting } = useCandyMachine();
 
   return (
     <div className="flex-shrink-0 w-full w-screen">
@@ -63,16 +60,26 @@ const Body = (): JSX.Element => {
                 <p className="px-9 py-2 text-white">
                   30% of mints donated to the <b>Monke DAO</b>
                 </p>
-                <p className="px-9 py-2 text-white">0 Monkette Available</p>
-                { isSoldOut ? (<div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                  <button className="p-2 opacity-50 cursor-not-allowed">
-                    <h1>Sold Out</h1>
-                  </button>
-                </div>) : (<div className="text-center opacity-50 bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                  <button className="p-2">
+                <p className="px-9 py-2 text-white">
+                  0 of 3333 Monkette Available
+                </p>
+                {isSoldOut ? (
+                  <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
+                    <button className="p-2 opacity-50 cursor-not-allowed">
+                      <h1>Sold Out</h1>
+                    </button>
+                  </div>
+                ) : isMinting ? (
+                  <div className="text-center animate-pulse cursor-not-allowed bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
+                    <button className="p-2">
+                      <h1>Minting</h1>
+                    </button>
+                  </div>
+                ) : (
+                  <div className="text-center cursor-not-allowed opacity-50 bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
                     <h1>Coming soon</h1>
-                  </button>
-                </div>)}
+                  </div>
+                )}
                 <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
                   <button className="p-2">
                     <h1>Marketplace</h1>

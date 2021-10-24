@@ -8,12 +8,11 @@ import {
   mintMultipleToken,
 } from "../utils/candy-machine";
 import { useWallet } from "@solana/wallet-adapter-react";
-import toast from "react-hot-toast";
 import useWalletBalance from "./useWalletBalance";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { sleep } from "../utils/utility";
 
-const MINT_PRICE_SOL = Number(1);
+const MINT_PRICE_SOL = Number(process.env.REACT_APP_MINT_PRICE_SOL);
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -120,15 +119,6 @@ export default function useCandyMachine() {
           "singleGossip",
           false
         );
-
-        // @ts-ignore
-        if (!status?.err) {
-          toast.success(
-            "Congratulations! Mint succeeded! Check the 'My Arts' page :)"
-          );
-        } else {
-          toast.error("Mint failed! Please try again!");
-        }
       }
     } catch (error: any) {
       let message = error.msg || "Minting failed! Please try again!";
@@ -147,7 +137,6 @@ export default function useCandyMachine() {
           message = `Minting period hasn't started yet.`;
         }
       }
-      toast.error(message);
     } finally {
       if (wallet?.publicKey) {
         const balance = await connection.getBalance(wallet?.publicKey);
@@ -219,20 +208,6 @@ export default function useCandyMachine() {
           newBalance =
             (await connection.getBalance(wallet?.publicKey)) / LAMPORTS_PER_SOL;
         }
-
-        if (totalSuccess) {
-          toast.success(
-            `Congratulations! ${totalSuccess} mints succeeded! Your NFT's should appear in your wallet soon :)`,
-            { duration: 6000, position: "bottom-center" }
-          );
-        }
-
-        if (totalFailure) {
-          toast.error(
-            `Some mints failed! ${totalFailure} mints failed! Check on your wallet :(`,
-            { duration: 6000, position: "bottom-center" }
-          );
-        }
       }
     } catch (error: any) {
       let message = error.msg || "Minting failed! Please try again!";
@@ -251,7 +226,6 @@ export default function useCandyMachine() {
           message = `Minting period hasn't started yet.`;
         }
       }
-      toast.error(message);
     } finally {
       if (wallet?.publicKey) {
         const balance = await connection.getBalance(wallet?.publicKey);

@@ -24,8 +24,6 @@ const Body = (): JSX.Element => {
     return () => clearInterval(interval);
   }, []);
 
-  const { isSoldOut, nftsData, onMint, isMinting } = useCandyMachine();
-
   return (
     <div className="flex-shrink-0 w-full w-screen">
       <div className="px-4 py-4">
@@ -63,34 +61,11 @@ const Body = (): JSX.Element => {
                 <p className="px-9 py-2 text-white">
                   {nftsData.itemsRemaining} of 3333 Monkette Available
                 </p>
-                {isSoldOut ? (
-                  <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                    <button className="p-2 opacity-50 cursor-not-allowed">
-                      <h1>Sold Out</h1>
-                    </button>
-                  </div>
-                ) : isMinting ? (
-                  <div className="text-center animate-pulse cursor-not-allowed bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                    <button className="p-2">
-                      <h1>Minting</h1>
-                    </button>
-                  </div>
-                ) : (
-                  <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                    <button
-                      onClick={() =>
-                        toast.promise(onMint(), {
-                          loading: <b>Minting Token</b>,
-                          success: <b>Minted!</b>,
-                          error: <b>Unable to mint token, please try again.</b>,
-                        })
-                      }
-                      className="p-2"
-                    >
-                      <h1>Mint</h1>
-                    </button>
-                  </div>
-                )}
+                <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
+                  <button className="p-2 opacity-50 cursor-not-allowed">
+                    <h1>Sold Out</h1>
+                  </button>
+                </div>
                 <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
                   <button className="p-2">
                     <h1>Marketplace</h1>

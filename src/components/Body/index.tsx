@@ -58,11 +58,11 @@ const Body = (): JSX.Element => {
                 <p className="px-9 py-2 text-white">
                   30% of mints donated to the <b>Monke DAO</b>
                 </p>
-                <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                  <button className="p-2">
+                <a href="https://magiceden.io/marketplace/solana_monkette_busines" target="_blank" rel="noreferrer">
+                  <div className="p-2 text-center bg-pink text-2xl border-white border-2 rounded-lg w-48 mx-auto my-2">
                     <h1>Marketplace</h1>
-                  </button>
-                </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

@@ -51,7 +51,7 @@ const Body = (): JSX.Element => {
                 </h1>
                 <p className="px-9 py-2 text-white">
                   3333 generative female NFTs inspired by{" "}
-                  <b>Solana Monkey Business</b> and the <b>Monke DAO</b>
+                  <b>Solana Monkey Business</b> and the <b>MonkeDAO</b>
                 </p>
                 <p className="px-9 py-2 text-white">
                   Airdropped to <b>Solana Monkey Business</b> owners that meet
@@ -61,7 +61,7 @@ const Body = (): JSX.Element => {
                   30% of mints donated to the <b>Monke DAO</b>
                 </p>
                 <p className="px-9 py-2 text-white">
-                  0 of 3333 Monkette Available
+                  {nftsData.itemsRemaining} of 3333 Monkette Available
                 </p>
                 {isSoldOut ? (
                   <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
@@ -76,8 +76,19 @@ const Body = (): JSX.Element => {
                     </button>
                   </div>
                 ) : (
-                  <div className="text-center cursor-not-allowed opacity-50 bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
-                    <h1>Coming soon</h1>
+                  <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">
+                    <button
+                      onClick={() =>
+                        toast.promise(onMint(), {
+                          loading: <b>Minting Token</b>,
+                          success: <b>Minted!</b>,
+                          error: <b>Unable to mint token, please try again.</b>,
+                        })
+                      }
+                      className="p-2"
+                    >
+                      <h1>Mint</h1>
+                    </button>
                   </div>
                 )}
                 <div className="text-center bg-pink text-xl border-white border-2 rounded-lg w-48 mx-auto my-2">

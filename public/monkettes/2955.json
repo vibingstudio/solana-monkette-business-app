@@ -1,0 +1,61 @@
+{
+  "name": "SMTB #2956",
+  "symbol": "SMTB",
+  "description": "3333 generative female NFTs inspired by SolanaMBS and MonkeDAO",
+  "seller_fee_basis_points": 650,
+  "external_url": "https://solanamonkette.business/smtb/2956",
+  "image": "2955.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Light Purple"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Earring",
+      "value": "Silver"
+    },
+    {
+      "trait_type": "Lipstick",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Dark Flower"
+    },
+    {
+      "trait_type": "Clothes",
+      "value": "Purple Blouse"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "None"
+    },
+    {
+      "trait_type": "Sparkle",
+      "value": "None"
+    }
+  ],
+  "collection": {
+    "name": "Solana Monkette Business",
+    "family": "Solana Monkette Business"
+  },
+  "properties": {
+    "category": "image",
+    "files": [
+      {
+        "uri": "2955.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "9SeFbAaSgay9WMX6v7AWSQDbE5Dw6T6TNHnsCiEfGRQp",
+        "share": 100
+      }
+    ]
+  }
+}

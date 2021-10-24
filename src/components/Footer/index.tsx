@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-strong-pink w-screen text-center text-white">
+    <footer className="bg-strong-pink w-full text-center text-white">
       <div className="flex flex-row justify-center py-3">
         <a
           href="https://twitter.com/MonketteSolana"

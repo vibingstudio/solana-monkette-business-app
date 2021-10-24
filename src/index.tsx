@@ -4,10 +4,12 @@ import "./styles.css";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Body from "./components/Body";
+import Home from "./components/Home";
 import { WalletBalanceProvider } from "./hooks/useWalletBalance";
 import WalletConnectionProvider from "./components/WalletConnectionProvider";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import SMBT from "./components/SMBT";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +18,16 @@ ReactDOM.render(
         <Toaster />
         <div className="flex flex-col justify-between h-screen">
           <Header />
-          <Body />
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/smbt/:id">
+                <SMBT />
+              </Route>
+            </Switch>
+          </Router>
           <Footer />
         </div>
       </WalletBalanceProvider>

@@ -10,6 +10,7 @@ import WalletConnectionProvider from "./components/WalletConnectionProvider";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SMBT from "./components/SMBT";
+import HallOfFameComponent from "./components/HallOfFame";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,6 +26,9 @@ ReactDOM.render(
               </Route>
               <Route path="/smbt/:id">
                 <SMBT />
+              </Route>
+              <Route path="/hall-of-fame/:id">
+                <HallOfFameComponent />
               </Route>
             </Switch>
           </Router>

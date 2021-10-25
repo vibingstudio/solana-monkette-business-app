@@ -50,7 +50,7 @@ const Header = (): JSX.Element => {
                   </a>
                   <div className="hidden md:block sm:ml-2">
                     <div className="flex uppercase">
-{/*
+                      {/*
                       {rarity()}
 */}
                       {market()}
@@ -100,7 +100,7 @@ const Header = (): JSX.Element => {
 
             <Popover.Panel className="sm:hidden uppercase">
               <div className="flex flex-col px-4 pt-2 pb-3 space-y-1 text-center">
-{/*
+                {/*
                 {rarity()}
 */}
                 {market()}

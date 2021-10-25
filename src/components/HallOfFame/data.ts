@@ -7,10 +7,10 @@ export interface MemberData {
 
 export const HallOfFame: { [k: string]: MemberData } = {
   test_info: {
-    monkettes: [123, 124, 125, 126],
+    monkettes: [3195],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    social: [{ network: "twitter", url: "https://twitter.com/test_info" }],
+      "Founder https://frequencmedia.com/ , full time builder for the Solana Ecosystem",
+    social: [{ network: "twitter", url: "https://twitter.com/jules_dudko" }],
     image: "/monkettes/1.png",
   }
 };

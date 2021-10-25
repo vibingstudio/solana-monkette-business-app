@@ -8,10 +8,10 @@ import Home from "./components/Home";
 import { WalletBalanceProvider } from "./hooks/useWalletBalance";
 import WalletConnectionProvider from "./components/WalletConnectionProvider";
 import { Toaster } from "react-hot-toast";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import SMBT from "./components/SMBT";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HallOfFameComponent from "./components/HallOfFame";
 import HallOfFameSingleComponent from "./components/HallOfFame/individual";
+import SMTB from "./components/SMBT";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,8 +25,8 @@ ReactDOM.render(
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/smbt/:id">
-                <SMBT />
+              <Route path="/smtb/:id">
+                <SMTB />
               </Route>
               <Route path="/hall-of-fame/:id">
                 <HallOfFameSingleComponent />

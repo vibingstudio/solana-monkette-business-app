@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const SMBT = (): JSX.Element => {
+const SMTB = (): JSX.Element => {
   const { id } = useParams();
 
   const attr = require("../../../public/monkettes/" + id + ".json");
@@ -53,4 +53,4 @@ const SMBT = (): JSX.Element => {
   );
 };
 
-export default SMBT;
+export default SMTB;

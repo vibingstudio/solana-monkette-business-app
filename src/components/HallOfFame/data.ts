@@ -12,5 +12,5 @@ export const HallOfFame: { [k: string]: MemberData } = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     social: [{ network: "twitter", url: "https://twitter.com/test_info" }],
     image: "/monkettes/1.png",
-  },
+  }
 };

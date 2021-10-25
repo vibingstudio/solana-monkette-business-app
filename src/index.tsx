@@ -11,6 +11,7 @@ import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SMBT from "./components/SMBT";
 import HallOfFameComponent from "./components/HallOfFame";
+import HallOfFameSingleComponent from "./components/HallOfFame/individual";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,6 +29,9 @@ ReactDOM.render(
                 <SMBT />
               </Route>
               <Route path="/hall-of-fame/:id">
+                <HallOfFameSingleComponent />
+              </Route>
+              <Route path="/hall-of-fame/">
                 <HallOfFameComponent />
               </Route>
             </Switch>

@@ -6,7 +6,7 @@ export interface MemberData {
 }
 
 export const HallOfFame: { [k: string]: MemberData } = {
-  test_info: {
+  jules_dudko: {
     monkettes: [3195],
     description:
       "Founder https://frequencmedia.com/ , full time builder for the Solana Ecosystem",

@@ -1,4 +1,40 @@
 import React, { useEffect, useState } from "react";
+import Faq from 'react-faq-component';
+
+const data = {
+  title: "FAQ",
+  rows: [
+    {
+      title: "When was the mint date?",
+      content: "Oct - 24 - 2021"      
+    },
+    {
+      title: "How many monkettes are?",
+      content: "3333 Monkettes."
+    },
+    {
+      title: "What are our market places?",
+      content: "<a href=\"https://magiceden.io/marketplace/solana_monkette_busines\"> Magic Eden,</a>\
+                <a href=\"https://www.alpha.art/collection/solana-monkette-business\">AlphaArt</a> and\
+               <a href=\"https://solanart.io/collections/solanamonkettebusiness\"> Solanart </a>"          
+    },
+    {
+      title: "Where can we check the rarity?",
+      content: "Visit: <a href=\"https://howrare.is/solanamonkettebusiness/\"> Howrare.is</a>"
+      
+    },
+    {
+      title: "What is our official Twitter/Discord?",
+      content: "Visit: <a href=\"https://twitter.com/MonketteSolana \">Twitter</a> <a href=\"https://discord.gg/YQg2jM2xhy \"> Discord</a> "
+      
+    },
+    {
+      title: "Are you from the SMB team?",
+      content: "We are not affiliated with, but we are inspired by them.\
+                This project was created by <a href=\"https://twitter.com/VibingStudios\">Vibing Studios </a>(created by  <a href=\"https://twitter.com/0xbustos\">@0xbustos</a> a passionate MonkeDAO member) \
+                we do not intend to harm the brand in any way, but to expand it 🙂"
+    }]
+};
 const Home = (): JSX.Element => {
   function randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -62,9 +98,30 @@ const Home = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <br></br>
+        {/*  */}
+        <div className="bg-strong-pink rounded-lg p-3 w-full md:w-1/2 mx-auto mb-10 text-white">
+          <Faq data={data}
+             styles={{
+              titleTextColor: "white",
+              rowTitleColor: "white",
+              rowContentColor: "white",
+              bgColor: "#e77da0",
+              rowTitleTextSize: '18px',
+              rowContentTextSize: '16px',
+              rowContentPaddingTop: '10px',
+              rowContentPaddingBottom: '10px',
+              rowContentPaddingLeft: '20px',
+              rowContentPaddingRight: '150px',
+              arrowColor: "white",
+          }} 
+          />
+        </div>
+        {/*  */}
       </div>
     </div>
   );
 };
+
 
 export default Home;
